@@ -18,9 +18,10 @@ public class UserService {
         // Where is the userservice going to get these values?
         // Hard coding these values is tedious. What if they change because for example we have multiple environments...
         // Should the UserService really be responsible for getting these values?
-        // We might use external configuration for that. But then again, this user service will need to know about how
-        // where this configuration is and how to get to it.
-        // The user repository just wants to do stuff that concerns users.
+        // This user service is coupled to these values. In this case, the values change based on where the application
+        // runs, so this class is coupled to environment where it is going to run.
+        // When you think about it like that, its kind of CRAZY :D
+        // The user service just wants to do stuff that concerns users.
 
         return databaseConnection.doQuery("select * from users");
     }
