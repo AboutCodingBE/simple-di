@@ -15,12 +15,12 @@ public class DatabaseConnection {
     }
 
     private void connect() {
-        System.out.printf("Doing things behind the scenes with these properties %s, %s, %s", url, user, password);
+        System.out.println("Fake Logging: Connecting...");
     }
 
     public List<String> doQuery(String query) {
         connect();
-        System.out.printf("doing this query {}%n", query);
+        System.out.printf("Fake Logging: doing this query {%s} \n", query);
 
         return List.of("Nicholas");
     }
