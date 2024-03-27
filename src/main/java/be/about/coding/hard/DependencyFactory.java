@@ -13,7 +13,7 @@ public class DependencyFactory {
         return new DatabaseConnection(url, username, password);
     }
 
-    public UserRepository createGetAllUsersProcess() {
-        return new UserRepository(createDatabaseConnection());
-    }
+//    public UserRepository createGetAllUsersProcess() {
+//        return new UserRepository(createDatabaseConnection());
+//    }
 }
