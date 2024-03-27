@@ -14,7 +14,7 @@ public class UserService {
         // Imagine at some point, we need to make a connection to the database
 
         var databaseConnection = new DatabaseConnection(url, username, password);
-        // Well, in order to create a database connection, I need to know the url, the password and the username.
+        // Well, in order to create a database connection, this service needs to know the url, the password and the username.
         // Where is the userservice going to get these values?
         // Hard coding these values is tedious. What if they change because for example we have multiple environments...
         // Should the UserService really be responsible for getting these values?
