@@ -15,9 +15,8 @@ public class App
      * Who has the assembler role in this example?
      */
     public void startApplication() {
-        var client = new Client();
-        var service = new Service();
-        client.setService(service);
+        // The dependency graph in code.
+        var client = new Client(new Service());
         client.doSomething(5);
     }
 }
