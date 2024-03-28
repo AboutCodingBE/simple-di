@@ -16,7 +16,8 @@ public class App
      */
     public void startApplication() {
         // The dependency graph in code.
-        var client = new Client(new Service());
+        var service = new Service();
+        var client = new Client(service);
         client.doSomething(5);
     }
 }
